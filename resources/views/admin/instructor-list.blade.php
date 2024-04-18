@@ -5,7 +5,7 @@
          <div class="main">
                 <div class="report-container">
                     <div class="report-header">
-                       <h1 class="recent-Articles">Instructor  List</h1>
+                       <h1 class="recent-Articles">Candidate  List</h1>
                     </div>
                     <div class="report-body">
                      <table class="table">

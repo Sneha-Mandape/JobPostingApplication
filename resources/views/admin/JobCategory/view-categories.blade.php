@@ -6,27 +6,19 @@
 
             <div class="report-container">
                <div class="report-header">
-                  <h1 class="recent-Articles">Courses List</h1>
+                  <h1 class="recent-Articles">Job Category List</h1>
                </div>
                <div class="report-body">
                 <table class="table">
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Level</th>
-                            <th>Description</th>
-                            <th>Image</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($courses as $course)
+                        @foreach($categories as $category)
                         <tr>
-                            <td>{{ $course->name }}</td>
-                            <td>{{ $course->level }}</td>
-                            <td>{{ $course->description }}</td>
-                            <td>
-                                <img src="{{ asset('storage/' . $course->image) }}" alt="Course Image" class="course-image">
-                            </td>
+                            <td>{{ $category->name }}</td>
                         </tr>
                         @endforeach
                     </tbody>

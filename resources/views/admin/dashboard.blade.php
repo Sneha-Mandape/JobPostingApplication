@@ -7,8 +7,8 @@
             <div class="box-container">
                <div class="box box1">
                   <div class="text">
-                     <h2 class="topic-heading">{{$totalCourses }}</h2>
-                     <h2 class="topic">Total Courses</h2>
+                     <h2 class="topic-heading">{{$jobListings }}</h2>
+                     <h2 class="topic">Total Job Posted</h2>
                   </div>
                   <img src=
                      "https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
@@ -16,8 +16,8 @@
                </div>
                <div class="box box2">
                   <div class="text">
-                     <h2 class="topic-heading">{{$totalBatches}}</h2>
-                     <h2 class="topic">Total Batches</h2>
+                     <h2 class="topic-heading">{{$jobApplications}}</h2>
+                     <h2 class="topic">Total Application</h2>
                   </div>
                   <img src=
                      "https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png"
@@ -25,8 +25,8 @@
                </div>
                <div class="box box3">
                   <div class="text">
-                     <h2 class="topic-heading">{{$totalInstructors}}</h2>
-                     <h2 class="topic">Total Instructors</h2>
+                     <h2 class="topic-heading">{{$categories}}</h2>
+                     <h2 class="topic">Total Category</h2>
                   </div>
                   <img src=
                      "https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(32).png"
@@ -34,14 +34,14 @@
                </div>
                <div class="box box4">
                   <div class="text">
-                     <h2 class="topic-heading">{{$totalSchedules}}</h2>
-                     <h2 class="topic">Total schedules</h2>
+                     <h2 class="topic-heading">{{$jobtypes}}</h2>
+                     <h2 class="topic">Total Job Type</h2>
                   </div>
                   <img src=
                      "https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
                </div>
             </div>
-            <div class="report-container">
+            {{-- <div class="report-container">
                <div class="report-header">
                   <h1 class="recent-Articles">Courses List</h1>
                   <button class="view">View All</button>
@@ -69,7 +69,7 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
+            </div> --}}
 
             </div>
          </div>

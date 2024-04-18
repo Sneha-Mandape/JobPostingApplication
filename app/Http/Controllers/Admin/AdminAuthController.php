@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Course;
-use App\Models\Batch;
-use App\Models\User;
-use App\Models\Schedule;
+use App\Models\JobListing;
+use App\Models\JobApplication;
+use App\Models\JobCategory;
+use App\Models\JobType;
 
 use Illuminate\Http\Request;
 
@@ -49,23 +49,12 @@ class AdminAuthController extends Controller
 
     public function dashboard()
     {
-        // Count the total number of courses
-        $totalCourses = Course::count();
-
-        // Count the total number of batches
-        $totalBatches = Batch::count();
-
-        // Count the total number of schedules
-        $totalSchedules = Schedule::count();
-
-        // Count the total number of instructors
-        $totalInstructors = User::count(); // Assuming User model is used for instructors
-
-        // Fetch the latest 10 courses
-        $courses = Course::latest()->take(10)->get();
-
+        $jobListings = JobListing::count();
+        $jobApplications = JobApplication::count();
+        $categories= JobCategory::count();
+        $jobtypes = JobType::count();
         // Pass the counts and courses data to the view
-        return view('admin.dashboard', compact('totalCourses', 'totalBatches', 'totalSchedules', 'totalInstructors', 'courses'));
+        return view('admin.dashboard', compact('jobListings', 'jobApplications', 'categories', 'jobtypes'));
     }
 
     public function logout()

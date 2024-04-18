@@ -7,17 +7,21 @@
       <meta name="viewport"
          content="width=device-width,
          initial-scale=1.0">
-      <title>Lecture Sceduling </title>
+      <title>Job Posting Application </title>
       <link rel="stylesheet"
          href="{{ asset('css/style.css')}}">
       <link rel="stylesheet"
          href="{{asset('css/responsive.css')}}">
+
+         <link rel="stylesheet"
+         href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
    <body>
       <!-- for header part -->
       <header>
          <div class="logosec">
-            <div class="logo">Lecture Sceduling</div>
+            <div class="logo">Job Posting App</div>
             <img src=
                "https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
                class="icn menuicn"
@@ -61,39 +65,49 @@
                      <h4> Dashboard</h4>
                   </div>
                 </a>
-                  <a href="{{route('add-courses')}}">
+
+                  <a href="{{route('add-category')}}">
                     <div class="option2 nav-option">
                         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
-                        <h4> Add Courses</h4>
+                        <h4> Add Job Category</h4>
                     </div>
                 </a>
-                <a href="{{route('add-batch')}}">
+                <a href="{{route('add-jobtype')}}">
                   <div class="nav-option option3">
                      <img src=
                         "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
                         class="nav-img"
                         alt="report">
-                     <h4> Add Batches</h4>
+                     <h4> Add Job Type</h4>
                   </div>
                 </a>
-                <a style="text-decoration: none" href="{{route('view-instructor')}}">
+                <a style="text-decoration: none" href="{{route('view-candidates')}}">
                   <div class="nav-option option4">
                      <img src=
                         "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
                         class="nav-img"
                         alt="institution">
-                     <h4>Instructors List</h4>
+                     <h4>Candidate List</h4>
                   </div>
                 </a>
-                <a href="{{route('add-schedule')}}">
+                <a href="{{route('add-joblist')}}">
                   <div class="nav-option option5">
                      <img src=
                         "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
                         class="nav-img"
                         alt="blog">
-                     <h4> Schedule Lecture</h4>
+                     <h4> Post a Job</h4>
                   </div>
                 </a>
+                <a href="{{route('applications')}}">
+                    <div class="nav-option option5">
+                       <img src=
+                          "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+                          class="nav-img"
+                          alt="blog">
+                       <h4> Received Applications</h4>
+                    </div>
+                  </a>
                 <form method="POST" action="{{ route('admin.logout') }}">
                     @csrf
                     <a onclick="event.preventDefault(); this.closest('form').submit();" style="cursor: pointer;">

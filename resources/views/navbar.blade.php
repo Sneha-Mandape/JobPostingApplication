@@ -7,7 +7,7 @@
       <meta name="viewport"
          content="width=device-width,
          initial-scale=1.0">
-      <title>Lecture Sceduling </title>
+         <title>Job Posting Application </title>
       <link rel="stylesheet"
          href="{{ asset('css/style.css')}}">
       <link rel="stylesheet"
@@ -17,7 +17,7 @@
       <!-- for header part -->
       <header>
          <div class="logosec">
-            <div class="logo">Lecture Sceduling</div>
+            <div class="logo">Job Posting App</div>
             <img src=
                "https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
                class="icn menuicn"
@@ -52,24 +52,36 @@
          <div class="navcontainer">
             <nav class="nav">
                <div class="nav-upper-options">
-                <a href="{{route('dashboard1')}}">
-                  <div class="nav-option option1">
-                     <img src=
-                        "https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
-                        class="nav-img"
-                        alt="dashboard">
-                     <h4> Dashboard</h4>
-                  </div>
-                </a>
+
                 <a href="{{route('instructor.view-schedule')}}">
                   <div class="nav-option option5">
                      <img src=
                         "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
                         class="nav-img"
                         alt="blog">
-                     <h4> Schedule Lecture</h4>
+                     <h4>Available Jobs</h4>
                   </div>
                 </a>
+                <a href="{{route('applied-jobs')}}">
+                    <div class="nav-option option5">
+                       <img src=
+                          "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+                          class="nav-img"
+                          alt="blog">
+                       <h4>Applied Jobs</h4>
+                    </div>
+                </a>
+
+                <a href="{{route('applicant-rejected-applications')}}">
+                    <div class="nav-option option5">
+                       <img src=
+                          "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+                          class="nav-img"
+                          alt="blog">
+                       <h4>Rejected Applications</h4>
+                    </div>
+                </a>
+
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <a onclick="event.preventDefault(); this.closest('form').submit();" style="cursor: pointer;">

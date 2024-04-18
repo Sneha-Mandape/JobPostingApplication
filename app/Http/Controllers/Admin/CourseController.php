@@ -10,7 +10,7 @@ use App\Models\Batch;
 class CourseController extends Controller
 {
     public function addCourse(){
-        return view ('admin.add-course');
+        return view ('admin.add-category');
     }
 
     public function storeCourse(Request $request)
@@ -18,31 +18,23 @@ class CourseController extends Controller
         // Validate the form data
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'level' => 'required|string|max:255',
-            'description' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust the file types and size as needed
         ]);
-
-        // Upload image
-        $imagePath = $request->file('image')->store('course_images', 'public');
 
         // Create a new Course instance
         $course = new Course();
         $course->name = $validatedData['name'];
-        $course->level = $validatedData['level'];
-        $course->description = $validatedData['description'];
-        $course->image = $imagePath;
+
 
         // Save the course to the database
         $course->save();
 
         // Redirect back with success message
-        return redirect()->back()->with('success', 'Course created successfully!');
+        return redirect()->back()->with('success', 'Category created successfully!');
     }
 
 
     public function addbatch(Request $request){
-        $courses = Course::all();
+        $courses = Category::all();
         return view('admin.add-batch', compact('courses'));
     }
 

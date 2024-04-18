@@ -2,7 +2,7 @@
 
 
 
-         <div class="main">
+         {{-- <div class="main">
 
 
             <div class="report-container">
@@ -36,5 +36,5 @@
             </div>
 
             </div>
-         </div>
-@include('admin.footer')
+         </div> --}}
+@include('footer')

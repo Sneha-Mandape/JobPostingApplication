@@ -8,30 +8,28 @@
             </div>
         @endif
         <div class="report-header">
-           <h1 class="recent-Articles">Add Course</h1>
-           <a href="{{route('view-course')}}"><button class="view">View All</button></a>
+           <h1 class="recent-Articles">Add Job Type</h1>
+           <a href="{{route('view-jobtypes')}}"><button class="view">View All</button></a>
         </div>
         <div class="report-body">
-            <form action="{{ route('submit-course')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('submit-jobtype')}}" method="POST" enctype="multipart/form-data">
                 @csrf <!-- CSRF protection -->
                 <div class="form-group">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" class="form-control" required>
+                    <label for="job category">Select Job Category:</label><br>
+                    <select id="job_category" name="job_category" class="form-control" required>
+                        <option value="">Select a Job Category</option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="level">Level:</label><br>
-                    <input type="text" id="level" name="level" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="description">Description:</label><br>
-                    <textarea id="description" name="description" class="form-control" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="image">Image:</label><br>
-                    <input type="file" id="image" name="image" class="form-control-file" accept="image/*" required>
+                    <label for="job_type_name">Job Type:</label><br>
+                    <input type="text" id="job_type_name" name="job_type_name" class="form-control" placeholder="Enter Job Type Name" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+
 
         </div>
      </div>

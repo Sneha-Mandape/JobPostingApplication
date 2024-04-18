@@ -3,27 +3,24 @@
 
 
          <div class="main">
+
             <div class="report-container">
                <div class="report-header">
-                  <h1 class="recent-Articles">Schedule List</h1>
+                  <h1 class="recent-Articles">Job Type List</h1>
                </div>
                <div class="report-body">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Instructor Name</th>
-                            <th>Course Name</th>
-                            <th>Batch</th>
-                            <th>Date</th>
+                            <th>Category Name</th>
+                            <th>Job Type Name</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($schedules as $schedule)
+                        @foreach($jobtypes as $jobtype)
                         <tr>
-                            <td>{{ $schedule->instructor->name }}</td>
-                            <td>{{ $schedule->course->name }}</td>
-                            <td>{{ $schedule->batch->batch_name }}</td>
-                            <td>{{ $schedule->date }}</td>
+                            <td>{{ $jobtype->jobCategory->name }}</td>
+                            <td>{{ $jobtype->job_type_name }}</td>
                         </tr>
                         @endforeach
                     </tbody>
